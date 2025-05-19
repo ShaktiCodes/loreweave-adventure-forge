@@ -50,10 +50,10 @@ const GamePlay = () => {
   
   return (
     <div className="w-full max-w-4xl mx-auto space-y-6">
-      <Card className="parchment scroll-paper p-4 shadow-lg border-2 border-fantasy-gold">
+      <Card className="parchment scroll-paper p-4 shadow-lg border-2 border-fantasy-gold bg-parchment-dark">
         <CardContent className="pt-4">
           <div 
-            className="min-h-[200px] font-scribe text-lg space-y-4 cursor-pointer"
+            className="min-h-[200px] font-scribe text-lg space-y-4 cursor-pointer text-fantasy-dark"
             onClick={handleTextClick}
           >
             {!animationComplete ? (
@@ -61,17 +61,17 @@ const GamePlay = () => {
                 key={typingKey} 
                 text={currentNode.content} 
                 speed={30}
-                className="font-scribe text-lg leading-relaxed"
+                className="font-scribe text-lg leading-relaxed text-black"
                 onComplete={handleTextComplete}
               />
             ) : (
-              <p className="font-scribe text-lg leading-relaxed">{currentNode.content}</p>
+              <p className="font-scribe text-lg leading-relaxed text-black">{currentNode.content}</p>
             )}
           </div>
           
           {showChoices && currentNode.choices.length > 0 && (
             <>
-              <Separator className="my-4 bg-fantasy-gold/60" />
+              <Separator className="my-4 bg-fantasy-gold" />
               <div className="space-y-3">
                 {currentNode.choices.map((choice) => (
                   <div 
@@ -81,7 +81,7 @@ const GamePlay = () => {
                   >
                     <Button 
                       variant="outline"
-                      className="w-full text-left justify-start border-fantasy-gold/50 hover:bg-fantasy-gold/20 text-black font-fantasy"
+                      className="w-full text-left justify-start border-fantasy-gold bg-fantasy-gold/10 hover:bg-fantasy-gold/30 text-black font-fantasy"
                       onClick={() => handleChoice(choice.nextNodeId)}
                     >
                       {choice.text}

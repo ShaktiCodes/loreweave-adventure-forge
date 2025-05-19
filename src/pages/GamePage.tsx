@@ -47,9 +47,19 @@ const GamePage = () => {
       </div>
       
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="w-full max-w-md mx-auto mb-6 bg-black/30">
-          <TabsTrigger value="story" className="flex-1">Story</TabsTrigger>
-          <TabsTrigger value="character" className="flex-1">Character</TabsTrigger>
+        <TabsList className="w-full max-w-md mx-auto mb-6 bg-black/30 border border-fantasy-gold">
+          <TabsTrigger 
+            value="story" 
+            className="flex-1 data-[state=active]:bg-fantasy-gold data-[state=active]:text-black"
+          >
+            Story
+          </TabsTrigger>
+          <TabsTrigger 
+            value="character" 
+            className="flex-1 data-[state=active]:bg-fantasy-gold data-[state=active]:text-black"
+          >
+            Character
+          </TabsTrigger>
         </TabsList>
         
         <TabsContent value="story" className="mt-0">
