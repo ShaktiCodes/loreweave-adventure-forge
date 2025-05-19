@@ -1,73 +1,68 @@
-# Welcome to your Lovable project
+# 🧙‍♂️ LoreWeaver AI
 
-## Project info
+LoreWeaver AI is an advanced, AI-powered dungeon game builder and storytelling platform. Create, play, and share immersive text-based adventures or D&D-style campaigns with the help of Google Gemini API. Let your imagination run wild while the AI weaves rich stories, characters, quests, and branching narratives for you.
 
-**URL**: https://lovable.dev/projects/d8d1e4d7-4c5a-4dcf-bc41-648e1c94348c
+---
 
-## How can I edit this code?
+## 🎮 Features
 
-There are several ways of editing your application.
+### 🛠️ Game Creator
+- 🎭 Select from themes like fantasy, sci-fi, horror, and more.
+- 🧑‍🎤 Define characters, NPCs, and world settings.
+- 🗺️ Map and world building.
+- ✍️ Use the Gemini API to generate quests, world lore, and dialogue.
+- 📋 Character Sheet Editor with Redux form state.
 
-**Use Lovable**
+### 🎲 Live Gameplay
+- 📜 AI-powered interactive storytelling engine.
+- 🧠 Dynamic storyline continuation using Gemini.
+- 🔘 Branching choices with persistent player decisions.
+- 💬 Typing animations and immersive reading experience.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d8d1e4d7-4c5a-4dcf-bc41-648e1c94348c) and start prompting.
+### 🔄 Campaign Management
+- 💾 Save, edit, publish, and replay your games.
+- 📱 Optimized for mobile and desktop gameplay.
+- 🌗 Dark Mode toggle for better UX.
+- 🏹 Player stats, inventory system, and character leveling.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🧪 Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Technology         | Description                                 |
+|--------------------|---------------------------------------------|
+| React          | UI framework using functional components and Hooks |
+| Redux Toolkit  | Global state management for game data, players, and sessions |
+| React Router   | Client-side routing for `/create`, `/play/:id`, `/campaigns` |
+| shadcn/ui      | Clean, accessible, and modern UI components |
+| Tailwind CSS   | Responsive and utility-first styling        |
+| Framer Motion  | Smooth animations, typing effects, transitions |
+| Gemini API     | AI storytelling, quest generation, and dialogue |
+| Vite           | Lightning-fast dev server & build system    |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🧑‍💻 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 1. Clone the Repository
+```bash
+https://github.com/ShaktiCodes/LoreWeaver.git
+cd LoreWeaver
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Configure Environment Variables
+Create a .env file and add your Gemini API key:
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+env
+Copy
+Edit
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
+4. Start the Development Server
+bash
+Copy
+Edit
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d8d1e4d7-4c5a-4dcf-bc41-648e1c94348c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
