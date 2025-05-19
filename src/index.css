@@ -1,87 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Fondamento:ital@0;1&family=MedievalSharp&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 48 61% 50%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 272 67% 19%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.75rem;
+    
+    --sidebar-background: 220 13% 12%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 272 67% 19%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
@@ -92,10 +41,55 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border selection:bg-accent/30 selection:text-white;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h-4v-4h4v4zm0-8h-4v4h-4v4h-4v-4h4v-4h4V20h-4v4h-4v4h-4v-4h4v-4h4v-4h-4v4h-4v4h-4v-4h4v-4h4v-4h-4v4h-4v4h-4v-4h4v-4h4v-4H8v4H4v4H0v-4h4v-4h4v-4H4v4H0V0h40v20z' fill='%232a1e37' fill-opacity='0.1'/%3E%3C/svg%3E");
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    @apply scroll-smooth;
+  }
+
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)];
+  }
+  
+  .parchment {
+    @apply bg-parchment bg-parchment-texture text-black;
+  }
+  
+  .medieval-border {
+    border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cpath d='M0 0h75v75H0z' fill='none' stroke='%23b1901e' stroke-width='8' stroke-dasharray='10,5'/%3E%3C/svg%3E") 25 stretch;
+  }
+  
+  .typewriter {
+    @apply overflow-hidden whitespace-nowrap border-r-4 border-white;
+    animation: typing 3.5s steps(40, end), cursor-blink 0.75s step-end infinite;
+  }
+  
+  .fade-in-text {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .scroll-paper {
+    background: 
+      radial-gradient(circle at left center, transparent 12px, #eae2cf 13px),
+      radial-gradient(circle at right center, transparent 12px, #eae2cf 13px);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .decorated-header {
+    @apply relative text-center;
+  }
+  
+  .decorated-header::before,
+  .decorated-header::after {
+    content: "•";
+    @apply inline-block mx-2 text-primary;
   }
 }
